@@ -9,9 +9,28 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
+      /** 
+       * The name `products` has to be identical to the string `products` inside the
+       * webpack configuration of the container
+       * Nothing works, if the two names are not identical.
+       */
       name: 'products',
+      /**
+       * This controls the name of the remoteEntry.js
+       * There is no good reason to change this from the default.
+       */
       filename: 'remoteEntry.js',
+      /**
+       * Exposes defines, what modules/files should be exposed to the outside world.
+       * We can choose, if we want to export only one module in products or single files
+       */
       exposes: {
+        /**
+         * Here we expose a module called `ProductsIndex` and if someone imports the module
+         * we return the src/index file.
+         * 
+         * We alias the src/index.js as ProductsIndex.
+         */
         './ProductsIndex': './src/index'
       }
     }),

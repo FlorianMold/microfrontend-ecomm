@@ -9,9 +9,25 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
+      /**
+       * The name is not going to be used inside host-module.
+       * The container is a host, it is trying to use code from other remotes.
+       * A remote is someting, that wants to share code.
+       * 
+       * The name property is not used inside the container normally, it is 
+       * convention to write it.
+       */
       name: 'container',
+      /**
+       * The remotes controls, how webpack is loading the remoteEntry.js file
+       */
       remotes: {
-        // Setup the remotes, which the container needs
+        /**
+         * Where the find the remoteEntry file to get access to the source-code.
+         * 
+         * The `products@` refers to the `name`-property inside the webpack
+         * configuration of the products-project.
+         */
         products: 'products@http://localhost:8081/remoteEntry.js'
       }
     }),
