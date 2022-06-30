@@ -11,6 +11,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'container',
       remotes: {
+        // Setup the remotes, which the container needs
         products: 'products@http://localhost:8081/remoteEntry.js'
       }
     }),
