@@ -11,6 +11,7 @@ module.exports = {
       name: 'cart',
       filename: 'remoteEntry.js',
       exposes: {
+        /** What is exposed here can be imported in another webpack.config.js file */
         './CartShow': './src/index'
       }
     }),

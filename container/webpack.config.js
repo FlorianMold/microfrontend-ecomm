@@ -28,7 +28,8 @@ module.exports = {
          * The `products@` refers to the `name`-property inside the webpack
          * configuration of the products-project.
          */
-        products: 'products@http://localhost:8081/remoteEntry.js'
+        products: 'products@http://localhost:8081/remoteEntry.js',
+        cart: 'cart@http://localhost:8082/remoteEntry.js',
       }
     }),
     // This plugin takes care of injecting the JS bundle into the index.html page

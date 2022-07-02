@@ -12,5 +12,18 @@
  */
 import 'products/ProductsIndex';
 
+/**
+ * How does this work?
+ * 
+ * Webpack sees the word cart and webpack looks into the remotes section in
+ * the webpack.config.js. Webpack sees that it needs to load the remoteEntry.js
+ * from the given url to get the code.
+ * 
+ * Inside the webpack.config.js of the cart the CartShow is exposed.
+ * 
+ * When we want to run the CartShow, we have to make sure, to have some dom-element, where to render this.
+ */
+import 'cart/CartShow';
+
 console.log('Container');
 

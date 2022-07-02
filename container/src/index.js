@@ -1,5 +1,3 @@
-const { RuntimeGlobals } = require('webpack');
-
 // TODO(FM): This is an import-function call
 import('./bootstrap');
 
