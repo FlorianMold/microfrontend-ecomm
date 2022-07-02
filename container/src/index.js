@@ -1,4 +1,7 @@
 // TODO(FM): This is an import-function call
+/**
+ * This form of import loades the bootstrap file asynchoronously. 
+ */
 import('./bootstrap');
 
 // What is this index.js file all about.
