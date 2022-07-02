@@ -32,7 +32,8 @@ module.exports = {
          * We alias the src/index.js as ProductsIndex.
          */
         './ProductsIndex': './src/index'
-      }
+      },
+      shared: ['faker']
     }),
     // This plugin takes care of injecting the JS bundle into the index.html page
     new HtmlWebpackPlugin({
