@@ -12,7 +12,7 @@ module.exports = {
       filename: 'remoteEntry.js',
       exposes: {
         /** What is exposed here can be imported in another webpack.config.js file */
-        './CartShow': './src/index'
+        './CartShow': './src/bootstrap'
       },
       /** 
        * This says, if we want to import the faker module, we want to share it. 

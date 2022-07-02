@@ -9,9 +9,9 @@
  * It looks for matching keys. In this case it looks for products in the remotes-array.
  * 
  */
-import {mount} from 'products/ProductsIndex';
+import { mount as productsMount} from 'products/ProductsIndex';
 
-mount(document.querySelector('#my-products'));
+productsMount(document.querySelector('#my-products'));
 
 /**
  * How does this work?
@@ -24,7 +24,10 @@ mount(document.querySelector('#my-products'));
  * 
  * When we want to run the CartShow, we have to make sure, to have some dom-element, where to render this.
  */
-import 'cart/CartShow';
+import { mount as cartMount } from 'cart/CartShow';
+
+cartMount(document.querySelector('#my-cart'));
+
 
 console.log('Container');
 
