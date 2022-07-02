@@ -27,11 +27,11 @@ module.exports = {
       exposes: {
         /**
          * Here we expose a module called `ProductsIndex` and if someone imports the module
-         * we return the src/index file.
+         * we return the src/bootstrap file.
          * 
-         * We alias the src/index.js as ProductsIndex.
+         * We alias the src/bootstrap.js as ProductsIndex.
          */
-        './ProductsIndex': './src/index'
+        './ProductsIndex': './src/bootstrap'
       },
       shared: ['faker']
     }),

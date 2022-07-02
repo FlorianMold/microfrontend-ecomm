@@ -8,9 +8,10 @@
  * 
  * It looks for matching keys. In this case it looks for products in the remotes-array.
  * 
- * 
  */
-import 'products/ProductsIndex';
+import {mount} from 'products/ProductsIndex';
+
+mount(document.querySelector('#my-products'));
 
 /**
  * How does this work?
